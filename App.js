@@ -1,9 +1,18 @@
-    const heading = React.createElement("h1", {}, "Hello World");
-    // {} -  gives attributes -> {id""heading", xyz="abc"}
-    const rootbyId = document.getElementById("root");
+  import React from "react";
+  import ReactDOM from "react-dom/client";
 
-    const root = ReactDOM.createRoot(rootbyId);
-    root.render(heading);
+
+  const heading = React.createElement("div", {}, "Hi Shivi!");
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+
+  root.render(heading);
+//   const heading = React.createElement("h1", {}, "Hello World");
+//     // {} -  gives attributes -> {id""heading", xyz="abc"}
+//     const rootbyId = document.getElementById("root");
+
+//     const root = ReactDOM.createRoot(rootbyId);
+//     root.render(heading);
 
 
     // heading is just an object, when root is rendering the heading that's when H1 tag is created and shown on the browser

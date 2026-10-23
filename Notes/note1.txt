@@ -1,0 +1,68 @@
+    const heading = React.createElement("h1", {}, "Hello World");
+    // {} -  gives attributes -> {id""heading", xyz="abc"}
+    const rootbyId = document.getElementById("root");
+
+    const root = ReactDOM.createRoot(rootbyId);
+    root.render(heading);
+
+
+    // heading is just an object, when root is rendering the heading that's when H1 tag is created and shown on the browser
+    // React.createElement is not creating a html element it is only creating an object
+    // ReactElement(Object) => HTML(Browser Understands)
+    //createElement has 3 - name of the tag, attributes, children - 
+    //children can be given directly or we can pass an array
+
+
+
+    -----------
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <!-- <div class="root">
+        <h1>Hello world</h1>
+    </div> -->
+    <div class="root"></div>
+    <!-- <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World";
+
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>   // This is how react is injected to JS, what happens when we open that file? what is it? why are there two files here?  
+// 1st file - core of react
+///2nd - react lib useful for DOM operations, react works on browsers and on phones - bridge between react and DOM (reactDOM)
+// these are superpowers react has given us
+// what are these files? -JS files which FB developers have written it
+
+<!-- <script>
+    const heading = React.createElement("h1", {}, "Hello World");
+    const rootbyId = document.getElementById("root");
+
+    const root = ReactDOM.createRoot(rootbyId);
+    root.render(root);
+</script> -->
+
+<script src="./App.js"></script>
+</body>
+</html>
+
+// where can script be adding? why are we adding it like that? why at the end of file ? what happens if we add it in the beginning?
+// what is CDN
+// why should react links be added at the end of body tag
+// what is cross origin
+
+
+//If you serve React from a CDN, we recommend to keep the crossorigin attribute set: - Check why
+
+
+// In a browser- what is the costliest operation? clicking a button, doing some manipulations on the site -> that is changing the DOM tree, removing/adding nodes -> so all lib and frameworks are trying to optimise this
+
+// where is CSS link added and why is it added at the end of heading
